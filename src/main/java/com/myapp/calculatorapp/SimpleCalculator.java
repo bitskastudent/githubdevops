@@ -18,11 +18,6 @@ public class SimpleCalculator {
 
 	public String division(double a, double b) {
 		scan.useLocale(Locale.US); // set to this have "." instead of "," it depends on your region
-		// double a, b;
-		// System.out.println("Enter first value");
-		// a = scan.nextDouble();
-		// System.out.println("Enter second value");
-		// b = scan.nextDouble();
 		if (b == 0)
 			return "Division by zero not possible";
 
@@ -38,10 +33,10 @@ public class SimpleCalculator {
 		// System.out.println("Enter second value");
 		// b = scan.nextDouble();
 		double val = a * b;
-
 		return val;
 	}
 
+	
 	public double subtraction(double a, double b) {
 		scan.useLocale(Locale.US);
 		// double a, b;
@@ -80,20 +75,20 @@ public class SimpleCalculator {
 		b = scan.nextDouble();
 		switch (x) {
 			case 1:
-				score = calc.addition(a,b);
+				score = calc.addition(a, b);
 				System.out.println(score);
 				break;
 			case 2:
-				score = calc.subtraction(a,b);
+				score = calc.subtraction(a, b);
 				System.out.println(score);
 				break;
 			case 3:
-				score = calc.multiplication(a,b);
+				score = calc.multiplication(a, b);
 				System.out.println(score);
 				break;
 			case 4:
 				String msg;
-				msg = calc.division(a,b);
+				msg = calc.division(a, b);
 				System.out.println(msg);
 				break;
 			default:
