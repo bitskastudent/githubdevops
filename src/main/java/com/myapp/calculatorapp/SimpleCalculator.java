@@ -27,16 +27,11 @@ public class SimpleCalculator {
 
 	public double multiplication(double a, double b) {
 		scan.useLocale(Locale.US);
-		// double a, b;
-		// System.out.println("Enter first value");
-		// a = scan.nextDouble();
-		// System.out.println("Enter second value");
-		// b = scan.nextDouble();
 		double val = a * b;
 		return val;
 	}
 
-	
+
 	public double subtraction(double a, double b) {
 		scan.useLocale(Locale.US);
 		// double a, b;
