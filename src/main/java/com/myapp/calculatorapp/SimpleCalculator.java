@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class SimpleCalculator {
 	Scanner scan = new Scanner(System.in);
 
-	void showMenu() {
+	public void showMenu() {
 		System.out.println("Choose an operation:");
 		System.out.println("1.Addition");
 		System.out.println("2.Subtraction");
@@ -17,7 +17,7 @@ public class SimpleCalculator {
 
 	}
 
-	String division(double a, double b) {
+	public String division(double a, double b) {
 		scan.useLocale(Locale.US); // set to this have "." instead of "," it depends on your region
 		if (b == 0)
 			return "Division by zero not possible";
@@ -25,18 +25,18 @@ public class SimpleCalculator {
 		return String.valueOf(a / b);
 	}
 
-	double multiplication(double a, double b) {
+	public double multiplication(double a, double b) {
 		scan.useLocale(Locale.US);
 		return a * b;
 	}
 
-	double subtraction(double a, double b) {
+	public double subtraction(double a, double b) {
 		scan.useLocale(Locale.US);
 		return a - b;
 
 	}
 
-	double addition(double a, double b) {
+	public double addition(double a, double b) {
 		scan.useLocale(Locale.US);
 		return a + b;
 
