@@ -8,7 +8,8 @@ import java.util.Scanner;
 public class SimpleCalculator {
 	Scanner scan = new Scanner(System.in);
 
-	public void showMenu() {
+	void showMenu() {
+		System.out.println("Choose an operation:");
 		System.out.println("1.Addition");
 		System.out.println("2.Subtraction");
 		System.out.println("3.Multiplication");
@@ -16,44 +17,29 @@ public class SimpleCalculator {
 
 	}
 
-	public String division(double a, double b) {
+	String division(double a, double b) {
 		scan.useLocale(Locale.US); // set to this have "." instead of "," it depends on your region
 		if (b == 0)
 			return "Division by zero not possible";
 
-		double val = a / b;
-		return String.valueOf(val);
+		return String.valueOf(a / b);
 	}
 
-	public double multiplication(double a, double b) {
+	double multiplication(double a, double b) {
 		scan.useLocale(Locale.US);
-		double val = a * b;
-		return val;
+		return a * b;
 	}
 
-
-	public double subtraction(double a, double b) {
+	double subtraction(double a, double b) {
 		scan.useLocale(Locale.US);
-		// double a, b;
-		// System.out.println("Enter first value");
-		// a = scan.nextDouble();
-		// System.out.println("Enter second value");
-		// b = scan.nextDouble();
-		double val = a - b;
+		return a - b;
 
-		return val;
 	}
 
-	public double addition(double a, double b) {
+	double addition(double a, double b) {
 		scan.useLocale(Locale.US);
-		// double a, b;
-		// System.out.println("Enter first value");
-		// a = scan.nextDouble();
-		// System.out.println("Enter second value");
-		// b = scan.nextDouble();
-		double val = a + b;
+		return a + b;
 
-		return val;
 	}
 
 	public static void main(String[] args) {
@@ -61,7 +47,9 @@ public class SimpleCalculator {
 		Scanner scan = new Scanner(System.in);
 		scan.useLocale(Locale.US);
 		int x;
-		double score, a, b;
+		double score;
+		double a;
+		double b;
 		calc.showMenu();
 		x = scan.nextInt();
 		System.out.println("Enter first value");
@@ -71,20 +59,20 @@ public class SimpleCalculator {
 		switch (x) {
 			case 1:
 				score = calc.addition(a, b);
-				System.out.println(score);
+				System.out.println("Addition " + score);
 				break;
 			case 2:
 				score = calc.subtraction(a, b);
-				System.out.println(score);
+				System.out.println("Substraction " + score);
 				break;
 			case 3:
 				score = calc.multiplication(a, b);
-				System.out.println(score);
+				System.out.println("Multiplication " + score);
 				break;
 			case 4:
 				String msg;
 				msg = calc.division(a, b);
-				System.out.println(msg);
+				System.out.println("Division " + msg);
 				break;
 			default:
 				System.out.println("Wrong choice");
